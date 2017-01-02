@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>edu.zipcloud.cloudstreetmarket</groupId>
@@ -12,8 +11,8 @@
 
 	<build>
 		<finalName>portal</finalName>
-		<plugins>
-			<plugin>
+		<plugins>	
+			<plugin>            
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.3</version>
@@ -30,7 +29,7 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	
 	<dependencies>
 
 		<!-- Projects dependencies -->
@@ -38,13 +37,16 @@
 			<groupId>edu.zipcloud</groupId>
 			<artifactId>zipcloud-core</artifactId>
 		</dependency>
-		
 		<dependency>
 			<groupId>edu.zipcloud.cloudstreetmarket</groupId>
 			<artifactId>cloudstreetmarket-core</artifactId>
 			<version>${csm.version}</version>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
@@ -100,7 +102,7 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 		</dependency>
-
+			
 		<!-- Utilities -->
 		<dependency>
 			<groupId>dom4j</groupId>
